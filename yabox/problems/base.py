@@ -17,9 +17,9 @@ contourParams = dict(
 surfaceParams = dict(
     rstride=1,
     cstride=1,
-    linewidth=0.1,
+    linewidth=0.02,
     edgecolors='k',
-    alpha=0.5,
+    alpha=0.2,
     antialiased=True,
     cmap=cm.PuRd_r
 )
@@ -204,7 +204,7 @@ class Michalewicz(BaseProblem):
     def evaluate(self, x):
         c = 0
         for i in range(0, len(x)):
-            c += np.sin(x[i]) * np.sin(( (i+1) * x[i]**2)/np.pi) ** (2*self.m)
+            c += np.sin(x[i]) * np.sin(((i+1) * x[i]**2)/np.pi) ** (2*self.m)
         return -c
 
 

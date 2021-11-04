@@ -118,7 +118,7 @@ class DE:
         self.fobj = fobj
         self.maxiters = maxiters
         if popsize is None:
-            self.popsize = self.dims * 5
+            self.popsize = self.dims * 25
         else:
             self.popsize = popsize
         self.initialize_random_state(seed)
